@@ -1,0 +1,14 @@
+streamlit
+python-dotenv
+PyPDF2
+chromadb
+faiss-cpu
+google-generativeai
+langchain
+langchain_google_genai
+langchain-openai
+pandas
+langchain_community
+joblib
+shutil
+uuid
