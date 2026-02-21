@@ -5,7 +5,12 @@ from prompts import ragprompt, condenseprompt
 from dotenv import load_dotenv
 from langchain_core.messages import HumanMessage, AIMessage
 
-load_dotenv()
+import os
+if os.getenv("K_SERVICE") is None:
+    load_dotenv()
+
+api_key = os.getenv("OPENAI_API_KEY")
+
 llm = ChatOpenAI(model=LLM_MODEL, temperature=0)
 
 def run_rag(db, query, chat_history):
