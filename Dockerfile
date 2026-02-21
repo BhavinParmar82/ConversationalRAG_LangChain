@@ -9,4 +9,4 @@ COPY . .
 
 EXPOSE 8080
 
-CMD streamlit run app_openai.py
+CMD ["sh", "-c", "streamlit run app_openai.py --server.port=$PORT --server.address=0.0.0.0"]
