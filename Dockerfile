@@ -1,4 +1,4 @@
-FROM python:3.10
+FROM python:3.10-slim
 
 WORKDIR /app
 
@@ -9,4 +9,5 @@ COPY . .
 
 EXPOSE 8080
 
-CMD ["sh", "-c", "streamlit run app_openai.py --server.port=$PORT --server.address=0.0.0.0"]
+CMD ["streamlit", "run", "app_openai.py", "--server.port=8080"]
+#, "--server.address=0.0.0.0"]
